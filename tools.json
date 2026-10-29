@@ -1,0 +1,50 @@
+[
+  {
+    "name": "markdown_to_text",
+    "description": "Convert Markdown to readable plain text (keyless, offline): strips headings, emphasis, code fences, and turns links/images into their text/alt. Ideal for de-formatting Markdown.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "markdown": {
+          "type": "string",
+          "description": "The Markdown text."
+        }
+      },
+      "required": [
+        "markdown"
+      ]
+    }
+  },
+  {
+    "name": "extract_links",
+    "description": "Extract all Markdown links [text](url) (and bare autolinks) as {text, url} pairs (keyless, offline).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "markdown": {
+          "type": "string",
+          "description": "The Markdown text."
+        }
+      },
+      "required": [
+        "markdown"
+      ]
+    }
+  },
+  {
+    "name": "extract_headings",
+    "description": "Extract the ATX heading outline (# … ######) as {level, text} entries (keyless, offline).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "markdown": {
+          "type": "string",
+          "description": "The Markdown text."
+        }
+      },
+      "required": [
+        "markdown"
+      ]
+    }
+  }
+]
